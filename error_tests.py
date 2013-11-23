@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.join('..'))
 from errors import ErrorMethods
 	
-#run tests with python -m unittest -v error_tests
+#run tests with python3 -m unittest -v error_tests
 
 class TestError(unittest.TestCase):
 
@@ -26,9 +26,6 @@ class TestError(unittest.TestCase):
 	def test_abs_percent_error(self):
 		result = [0,11.1,10,12.5,33.3,10,100,57.1,46.2,60]
 		self.assertEqual(result,self.tester.abs_percent_error(self.actuals,self.forecast))
-
-	def test_mae(self):
-		pass
 
 	def test_mape(self):
 		result = [0,1.1,2.1,3.4,6.7,7.7,17.7,23.4,28.0,34.0]
